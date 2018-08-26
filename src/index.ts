@@ -22,7 +22,7 @@ commander
     .option('-o, --output <csv>', 'output file')
     .action(((input, options) => {
         for (const option of ['username', 'email', 'output']) {
-            if (!options[option]) {
+            if ('undefined' === typeof options[option]) {
                 throw new Error(`missing required option: ${option}`);
             }
         }
