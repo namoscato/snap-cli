@@ -40,7 +40,7 @@ commander
 
 function createUser(csv: any[], index: number, options): Promise<any> {
     const row = csv[index];
-    const username = row[options.username];
+    const username = row[options.username].trim();
     const logPrefix = `[${index}:${username}]`;
 
     console.log(`${logPrefix} Creating user`);
@@ -50,14 +50,14 @@ function createUser(csv: any[], index: number, options): Promise<any> {
 
     if ('undefined' !== typeof options.password) {
         passwordColumn = options.password;
-        password = row[passwordColumn];
+        password = row[passwordColumn].trim();
     }
 
     if (!password) {
         password = Math.random().toString(36).slice(-6);
     }
 
-    return snapClient.createUser(username, row[options.email], password).then(() => {
+    return snapClient.createUser(username, row[options.email].trim(), password).then(() => {
         row[passwordColumn] = password;
 
         if (++index < csv.length) {
