@@ -2,7 +2,7 @@
     "name": "snap-cli",
     "author": "Nick Amoscato <nick@amoscato.com>",
     "license": "MIT",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Command-line utilities for Snap!",
     "repository": {
         "type": "git",
