@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/snap-cli.svg)](https://www.npmjs.com/package/snap-cli)
+
 # snap-cli
 
 Command-line utilities for [Snap<em>!</em>](https://snap.berkeley.edu/)
